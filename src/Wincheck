@@ -1,0 +1,61 @@
+
+class Wincheck():
+  def __init__(self, board):
+    self.grid = board
+    self.winner = False
+    self.person = ""
+  def update_grid(self,board):
+    self.grid = board  
+  def checkwin(self):
+  
+    
+    
+    
+    
+     
+    if ((self.grid[0][0].__eq__(self.grid[1][1]))   and (self.grid[1][1].__eq__(self.grid[2][2]))):
+
+
+      self.winner = True
+      self.person = self.grid[0][0]
+   
+    if ((self.grid[0][2].__eq__(self.grid[1][1]))   and (self.grid[1][1].__eq__(self.grid[2][0]))):           
+      self.winner = True
+      self.person = self.grid[0][0]
+
+    if ((self.grid[0][0].__eq__(self.grid[0][1])) and (self.grid[0][1].__eq__(self.grid[0][2]))):
+      self.person = self.grid[0][0]
+      self.winner = True
+    
+    
+    
+    if ((self.grid[1][0].__eq__(self.grid[1][1])) and (self.grid[1][1].__eq__(self.grid[1][2]))):
+      self.person = self.grid[1][0]
+      self.winner = True
+    
+    
+    
+    if ((self.grid[2][0].__eq__(self.grid[2][1])) and (self.grid[2][1].__eq__(self.grid[2][2]))):
+      self.person = self.grid[2][0]
+      self.winner = True
+    
+    
+    if ((self.grid[0][0].__eq__(self.grid[1][0])) and (self.grid[1][0].__eq__(self.grid[2][0]))):
+      self.person = self.grid[0][0]
+      self.winner = True
+    
+    
+    
+    if ((self.grid[0][1].__eq__(self.grid[1][1])) and (self.grid[1][1].__eq__(self.grid[2][1]))):
+      self.person = self.grid[0][1]
+      self.winner = True
+    
+    
+    if ((self.grid[0][2].__eq__(self.grid[1][2])) and (self.grid[1][2].__eq__(self.grid[2][2]))):
+      self.person = self.grid[0][2]
+      self.winner = True
+    
+    
+    
+        
+        
